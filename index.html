@@ -1,1 +1,223 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Каталог</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="product-card">
+          <div class="image">
+            <a href=""
+              ><img src="img/Product_1.png" alt="Product_Title_1" />
+            </a>
+          </div>
+          <div class="caption">
+            <h4>
+              <a href="" class="product-name"
+                >SPC ЛАМИНАТ ROYCE ENJOY ДУБ ЭШФОРД E310</a
+              >
+            </h4>
+            <p class="description">42 класс 3.5 мм</p>
+            <p class="price">
+              <span>1 390 ₽</span>
+              <span> / м&sup2;</span>
+            </p>
+
+            <div class="button-group">
+              <button type="button" onclick="">Купить в 1 клик</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="image">
+            <a href=""
+              ><img src="img/Product_2.png" alt="Product_Title_2" />
+            </a>
+          </div>
+          <div class="caption">
+            <h4>
+              <a href="" class="product-name"
+                >SPC ЛАМИНАТ ROYCE ENJOY ДУБ НОРДБОРГ E306</a
+              >
+            </h4>
+            <p class="description">42 класс 3.5 мм</p>
+            <p class="price">
+              <span>1 390 ₽</span>
+              <span> / м&sup2;</span>
+            </p>
+
+            <div class="button-group">
+              <button type="button" onclick="">Купить в 1 клик</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="image">
+            <a href=""
+              ><img src="img/Product_3.png" alt="Product_Title_3" />
+            </a>
+          </div>
+          <div class="caption">
+            <h4>
+              <a href="" class="product-name"
+                >SPC ЛАМИНАТ ROYCE ENJOY ДУБ БЛЭКРОК E308</a
+              >
+            </h4>
+            <p class="description">42 класс 3.5 мм</p>
+            <p class="price">
+              <span>1 390 ₽</span>
+              <span> / м&sup2;</span>
+            </p>
+
+            <div class="button-group">
+              <button type="button" onclick="">Купить в 1 клик</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="image action">
+            <a href=""
+              ><img src="img/Product_4.png" alt="Product_Title_1" />
+            </a>
+          </div>
+          <div class="caption">
+            <h4>
+              <a href="" class="product-name"
+                >SPC ЛАМИНАТ MODULED LAYRED LAUREL OAK 51864</a
+              >
+            </h4>
+            <p class="description">33 класс 6 мм</p>
+            <p class="price">
+              <span>1 890 ₽</span>
+              <span class="price-old">2 240 ₽</span>
+              <span> / м&sup2;</span>
+            </p>
+
+            <div class="button-group">
+              <button type="button" onclick="">Купить в 1 клик</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="image action">
+            <a href=""
+              ><img src="img/Product_5.png" alt="Product_Title_2" />
+            </a>
+          </div>
+          <div class="caption">
+            <h4>
+              <a href="" class="product-name"
+                >SPC ЛАМИНАТ MODULED LAYRED CANTERA 46930</a
+              >
+            </h4>
+            <p class="description">33 класс 6 мм</p>
+            <p class="price">
+              <span>1 790 ₽</span>
+              <span class="price-old">2 170 ₽</span>
+              <span> / м&sup2;</span>
+            </p>
+
+            <div class="button-group">
+              <button type="button" onclick="">Купить в 1 клик</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="image action">
+            <a href=""
+              ><img src="img/Product_6.png" alt="Product_Title_3" />
+            </a>
+          </div>
+          <div class="caption">
+            <h4>
+              <a href="" class="product-name"
+                >SPC ЛАМИНАТ MODULED LAYRED MOUNTAIN OAK 56275</a
+              >
+            </h4>
+            <p class="description">33 класс 6 мм</p>
+            <p class="price">
+              <span>1 850 ₽</span>
+              <span class="price-old">2 030 ₽</span>
+              <span> / м&sup2;</span>
+            </p>
+
+            <div class="button-group">
+              <button type="button" onclick="">Купить в 1 клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4 class="modal-head">КУПИТЬ В 1 КЛИК</h4>
+        <div class="modal-details">
+          <img
+            id="modal-image"
+            class="modal-image"
+            src=""
+            alt="Product Image"
+          />
+          <div class="product-details">
+            <h2 id="modal-product-name" class="modal-product-name"></h2>
+            <p id="modal-description" class="description modal-description"></p>
+            <p class="price modal-price">
+              <span id="modal-price" class="price"></span>
+              <span id="modal-old-price" class="price-old"></span>
+              <span> / м&sup2;</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-form">
+          <div class="input-icon">
+            <input
+              type="text"
+              id="name-input"
+              class="modal-input name-input"
+              placeholder="Имя"
+            />
+            <p class="error">Заполните Имя</p>
+          </div>
+          <div class="input-icon">
+            <input
+              type="tel"
+              id="phone-input"
+              class="modal-input tel"
+              placeholder="+7 (___) ___ ____"
+            />
+            <p class="error">Заполните номер телефона</p>
+          </div>
+          <div class="consent-container">
+            <input
+              type="radio"
+              id="consent"
+              name="consent"
+              value="yes"
+              class="consent-radio"
+            />
+            <label for="consent"
+              >Даю согласие на обработку персональных данных</label
+            >
+          </div>
+          <button id="buy-button" class="modal-button">Купить</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="tel_input.js"></script>
+  </body>
+</html>
