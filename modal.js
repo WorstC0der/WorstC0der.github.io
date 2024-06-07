@@ -54,14 +54,14 @@ saveButton.onclick = function () {
   let err = false;
   // Проверяем поля ввода на ошибки
   if (!validateName(nameInput.value)) {
-    showError(nameInput, "Заполните имя");
+    showError(nameInput);
     err = true;
   } else {
     hideError(nameInput);
   }
 
   if (!validatePhoneNumber(phoneInput.value)) {
-    showError(phoneInput, "Введите корректный номер телефона");
+    showError(phoneInput);
     err = true;
   } else {
     hideError(phoneInput);
@@ -90,15 +90,13 @@ function validatePhoneNumber(phone) {
 }
 
 // Функция для отображения сообщения об ошибке
-function showError(inputElement, message) {
+function showError(inputElement) {
   var errorMessage = inputElement.nextElementSibling;
-  errorMessage.textContent = message;
   errorMessage.style.visibility = "visible";
 }
 
 // Функция для скрытия сообщения об ошибке
 function hideError(inputElement) {
   var errorMessage = inputElement.nextElementSibling;
-  errorMessage.textContent = "";
   errorMessage.style.visibility = "hidden";
 }
