@@ -154,7 +154,7 @@ p {
 }
 
 .modal-content {
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 3rem;
   border: 0.1rem solid #888;
   border-radius: 1rem;
@@ -340,6 +340,7 @@ p {
   }
 
   .modal-content {
+    margin: 15% auto;
     width: 60%;
     padding: 5rem;
     border-radius: 3rem;
