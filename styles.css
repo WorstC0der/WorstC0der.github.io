@@ -1,8 +1,8 @@
 @font-face {
   font-family: "manrope";
   src: url("Manrope-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 600;
+  font-style: medium;
 }
 
 html {
@@ -15,9 +15,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 60vw;
+  max-width: 70.58vw;
   margin: 0 auto;
-  padding: 2rem;
   box-sizing: border-box;
 }
 
@@ -25,22 +24,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 2rem;
 }
 
 .product-name {
-  font-size: 1.313rem;
+  font-size: 1.563rem;
   color: inherit;
   text-decoration: none;
 }
 
 .product-card {
-  max-width: calc(33.33% - 1.5rem);
+  max-width: calc(33.33% - 1.98rem);
   background: #f4f4f6;
   border-radius: 1rem;
   box-sizing: border-box;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 2.97rem;
   position: relative;
 }
 
@@ -52,10 +50,10 @@ body {
 .action::before {
   content: "";
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 4rem;
-  height: 4rem;
+  top: 1.49rem;
+  right: 1.49rem;
+  width: 4.539rem;
+  height: 4.539rem;
   background-color: white;
   color: black;
   border-radius: 50%;
@@ -67,13 +65,13 @@ body {
 
 .action::after {
   content: "New";
-  font-size: 1.25rem;
+  font-size: 1.563rem;
 }
 
 .action::before {
   content: "%";
-  font-size: 1.6rem;
-  right: 6rem;
+  font-size: 1.935rem;
+  right: 7.519rem;
   background: rgba(224, 251, 82, 1);
 }
 
@@ -83,11 +81,11 @@ body {
 }
 
 .caption {
-  padding: 0 1.2rem;
+  padding: 0 1.49rem;
 }
 
 .caption h4 {
-  margin: 1rem 0;
+  margin: 1rem 0 0.85rem 0;
 }
 
 p {
@@ -97,13 +95,13 @@ p {
 .description {
   color: rgba(0, 0, 0, 0.5);
   text-align: right;
-  font-size: 1.125rem;
-  margin-top: 2rem;
+  font-size: 1.34rem;
+  margin: 0 0 0.2rem;
 }
 
 .price {
   margin-bottom: 1rem;
-  font-size: 1.875rem;
+  font-size: 2.2325rem;
   font-weight: bold;
   text-align: right;
 }
@@ -118,13 +116,13 @@ p {
   background-color: white;
   color: black;
   border: 0.1rem solid black;
-  border-radius: 2.5rem;
+  border-radius: 3rem;
   cursor: pointer;
-  line-height: 2.5rem;
+  line-height: 2.945rem;
   padding: 0.8rem 0 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.49rem;
   font-family: "Manrope", sans-serif;
-  font-size: 1.375rem !important;
+  font-size: 1.563rem !important;
 }
 
 .button-group button:hover {
@@ -146,37 +144,39 @@ p {
 
 .close {
   position: absolute;
-  right: 1rem;
-  top: -1rem;
-  font-size: 5rem;
+  right: 1.49rem;
+  top: 1.49rem;
+  line-height: 3.725rem;
+  font-size: 7.45rem;
   font-weight: 100;
   cursor: pointer;
 }
 
 .modal-content {
   margin: 10% auto;
-  padding: 3rem;
+  padding: 2.98rem 3.75rem;
   border: 0.1rem solid #888;
   border-radius: 1rem;
-  width: 27%;
+  width: 32.555%;
   background-color: white;
   position: relative;
 }
 
 .modal-head {
-  font-size: 2.85rem;
-  margin: 0 0 2rem 0;
+  font-size: 3.425rem;
+  margin: 0 0 2.98rem 0;
 }
 
 .modal-image {
-  width: 10rem;
-  height: 10rem;
+  width: 12.43rem;
+  height: 12.43rem;
   border-radius: 1rem;
 }
 
 .modal-product-name {
-  margin: 0 0 0.8rem 0;
-  font-size: 1.65em;
+  margin: 0 0 0.9rem 0;
+  font-size: 1.935rem;
+  line-height: 130%;
 }
 
 .modal-details {
@@ -184,19 +184,19 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 0 2rem 0;
+  margin: 0 0 4.47rem 0;
 }
 
 .product-details {
   flex: 1;
-  padding-left: 1.5rem;
+  padding-left: 1.79rem;
   position: relative;
 }
 
 .modal-description {
   text-align: left;
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.565rem;
 }
 
 .modal-price {
@@ -214,12 +214,12 @@ p {
 
 .modal-input {
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  border-radius: 2.5rem;
-  line-height: 2.5rem;
+  border-radius: 3rem;
+  line-height: 3.54rem;
   padding: 0.8rem 3rem 0.8rem;
   width: 100%;
   box-sizing: border-box;
-  font-size: 1.35rem;
+  font-size: 1.563rem;
 }
 
 .input-icon::before {
@@ -250,30 +250,32 @@ p {
   display: flex;
   align-items: center;
   margin: 0.5rem 0 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1.34rem;
   color: rgba(0, 0, 0, 0.75);
 }
 
 .consent-radio {
   margin: 0 0.5rem 0 0;
-  height: 1.3rem;
-  width: 1.3rem;
+  height: 1.49rem;
+  width: 1.49rem;
 }
 
 .error {
   visibility: hidden;
   color: red;
   margin: 0;
+  font-size: 1.34rem;
 }
 
 .modal-button {
   background-color: black;
   color: white;
-  border-radius: 2.5rem;
-  line-height: 2.5rem;
+  border-radius: 3rem;
+  line-height: 3.39rem;
   padding: 0.8rem 2.3rem 0.8rem;
   font-family: "Manrope", sans-serif;
   cursor: pointer;
+  font-size: 1.563rem;
 }
 
 @media (max-width: 768px) {
