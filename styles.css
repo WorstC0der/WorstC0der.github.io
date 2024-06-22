@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Manrope", sans-serif;
+  margin: 0;
 }
 
 .container {
@@ -132,14 +133,14 @@ p {
 
 /* Стили для модального окна */
 .modal {
-  display: none; /* По умолчанию модальное окно скрыто */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .close {
@@ -258,6 +259,7 @@ p {
   margin: 0 0.5rem 0 0;
   height: 1.49rem;
   width: 1.49rem;
+  margin-right: 0.59525rem;
 }
 
 .error {
@@ -278,94 +280,100 @@ p {
   font-size: 1.563rem;
 }
 
-@media (max-width: 768px) {
+/* Для устройств с шириной экрана до 1200px (планшет) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 89.84vw;
+  }
+
   .product-card {
-    max-width: calc(
-      50% - 2rem
-    ); /* Для устройств с шириной экрана до 768px (мобильные +-) */
+    max-width: calc(50% - 2.785rem);
+    border-radius: 2rem;
+    margin-bottom: 5.585rem;
   }
 
   .button-group button {
     border: 0.1rem solid black;
-    border-radius: 4rem;
-    line-height: 4.2rem;
-    margin-bottom: 1.5rem;
-    font-size: 2.2rem !important;
+    border-radius: 9rem;
+    line-height: 8.63rem;
+    margin-bottom: 2.61rem;
+    font-size: 3.725rem !important;
   }
 
   .product-name {
-    font-size: 2.49rem;
+    font-size: 3.725rem;
+    line-height: 130%;
   }
 
   .description {
-    font-size: 2rem;
-    margin-top: 2rem;
-    text-align: right;
+    font-size: 3.164rem;
+    margin: 5.581rem 0 0.745rem;
   }
 
   .price {
-    margin-bottom: 1rem;
-    font-size: 2.8rem;
-  }
-
-  .product-card {
-    border-radius: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.605rem;
+    font-size: 4.465rem;
   }
 
   .caption {
-    padding: 0 2rem;
+    padding: 0 3.725rem;
+  }
+
+  .caption h4 {
+    margin: 1.675rem 0 0;
   }
 
   .action::after,
   .action::before {
-    top: 2rem;
-    right: 2rem;
-    width: 7rem;
-    height: 7rem;
+    top: 3.725rem;
+    right: 3.725rem;
+    width: 10.98rem;
+    height: 10.98rem;
   }
 
   .action::after {
-    font-size: 2.25rem;
+    font-size: 3.725rem;
   }
 
   .action::before {
-    font-size: 2.6rem;
-    right: 11rem;
+    font-size: 4.465rem;
+    right: 18.43rem;
   }
 
   /* Стили для модального окна */
   .close {
-    right: 4rem;
-    top: 0;
-    font-size: 10rem;
+    right: 3.7205rem;
+    top: 3.7205rem;
+    font-size: 18.58rem;
+    line-height: 9.305rem;
   }
 
   .modal-content {
     margin: 15% auto;
-    width: 60%;
-    padding: 5rem;
+    width: 72.9%;
+    padding: 5.581rem 7.441rem;
     border-radius: 3rem;
   }
 
   .modal-head {
-    font-size: 5.25rem;
-    margin: 0 0 8rem 0;
+    font-size: 6.697rem;
+    margin: 0 0 9.86rem 0;
+    line-height: 130%;
   }
 
   .modal-image {
-    width: 20rem;
-    height: 20rem;
+    width: 29.77rem;
+    height: 29.77rem;
     border-radius: 1.5rem;
   }
 
   .modal-product-name {
-    margin: 0 0 1.8rem 0;
-    font-size: 3.65em;
+    margin: 0 0 2.233rem 0;
+    font-size: 4.465em;
   }
 
   .modal-details {
-    margin: 0 0 5rem 0;
+    margin: 0 0 9rem 0;
   }
 
   .product-details {
@@ -373,19 +381,25 @@ p {
   }
 
   .modal-description {
-    text-align: left;
-    font-size: 2.65rem;
+    font-size: 3.721rem;
+    margin: 0;
+  }
+
+  .modal-price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     margin: 0;
   }
 
   .modal-input {
     border: 0.1rem solid rgba(0, 0, 0, 0.3);
-    border-radius: 5.5rem;
-    line-height: 5.5rem;
+    border-radius: 8rem;
+    line-height: 8.13rem;
     padding: 1.8rem 6rem 1.8rem;
     width: 100%;
     box-sizing: border-box;
-    font-size: 3.35rem;
+    font-size: 3.725rem;
   }
 
   .input-icon::before {
@@ -393,32 +407,195 @@ p {
     left: 4.35rem;
     width: 0.75rem;
     font-size: 3.35rem;
+    margin-top: -3.7rem;
   }
 
   .consent-container {
-    margin: 0.5rem 0 8rem;
-    font-size: 2.7rem;
+    margin-bottom: 11.165rem;
+    font-size: 3.165rem;
   }
 
   .consent-radio {
     margin: 0 0.5rem 0 0;
-    height: 2.7rem;
-    width: 2.7rem;
+    height: 3.725rem;
+    width: 3.725rem;
+    margin-right: 1.4881rem;
   }
 
   .error {
     visibility: hidden;
     color: red;
-    font-size: 2.5rem;
+    font-size: 3.1622rem;
   }
 
   .modal-button {
     border: 0.1rem solid rgba(0, 0, 0, 1);
-    border-radius: 5.5rem;
-    line-height: 5.5rem;
+    border-radius: 8rem;
+    line-height: 8.13rem;
     padding: 1.8rem 6rem 1.8rem;
     width: 100%;
     box-sizing: border-box;
+    font-size: 3.725rem;
+  }
+}
+
+/* Для устройств с шириной экрана до 767px (мобильные) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 91.115vw;
+  }
+
+  .product-card {
+    max-width: calc(50% - 3.17rem);
+    border-radius: 2rem;
+    margin-bottom: 6.3491rem;
+  }
+
+  .button-group button {
+    border: 0.1rem solid black;
+    border-radius: 9rem;
+    line-height: 11.68rem;
+    margin-bottom: 3.969rem;
+    font-size: 5.556rem !important;
+  }
+
+  .product-name {
+    font-size: 5.556rem;
+    line-height: 130%;
+  }
+
+  .description {
+    font-size: 4.762rem;
+    margin: 13.0952rem 0 0.7938rem;
+  }
+
+  .price {
+    margin-bottom: 5.9524rem;
+    font-size: 4.465rem;
+    line-height: 130%;
+  }
+
+  .caption {
+    padding: 0 3.9681rem;
+  }
+
+  .caption h4 {
+    margin: 3.9682rem 0 0;
+  }
+
+  .action::after,
+  .action::before {
+    top: 3.725rem;
+    right: 3.725rem;
+    width: 10.98rem;
+    height: 10.98rem;
+  }
+
+  .action::after {
+    font-size: 3.725rem;
+  }
+
+  .action::before {
+    font-size: 4.465rem;
+    right: 18.43rem;
+  }
+
+  /* Стили для модального окна */
+  .close {
+    right: 5.9523rem;
+    top: 5.9523rem;
+    font-size: 27.75rem;
+    line-height: 13.89rem;
+  }
+
+  .modal-content {
+    margin: 5% auto;
+    width: 100%;
+    padding: 7.9364rem 11.9046rem 19.0475rem;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+
+  .modal-head {
+    font-size: 9.1301rem;
+    margin: 0 0 15.873rem 0;
+    line-height: 130%;
+  }
+
+  .modal-image {
+    width: 39.685rem;
+    height: 39.685rem;
+    border-radius: 5rem;
+  }
+
+  .modal-product-name {
+    margin: 0 0 3.9684rem 0;
+    font-size: 6.7461rem;
+    line-height: 130%;
+  }
+
+  .modal-details {
+    margin: 0 0 11.905rem 0;
+  }
+
+  .product-details {
+    padding-left: 5rem;
+  }
+
+  .modal-description {
+    font-size: 5.556rem;
+    margin: 0 0 9.127rem;
+  }
+
+  .modal-price {
+    position: static;
+    margin: 0;
+    font-size: 7rem !important;
+  }
+
+  .modal-input {
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 10rem;
+    line-height: 15.455rem;
+    padding: 1.8rem 6rem 1.8rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 5.56rem;
+  }
+
+  .input-icon::before {
+    top: 6.9rem;
+    left: 4.35rem;
+    width: 0.75rem;
     font-size: 3.35rem;
+    margin-top: -3.9rem;
+  }
+
+  .consent-container {
+    margin-bottom: 7.143rem;
+    font-size: 4.762rem;
+  }
+
+  .consent-radio {
+    margin: 0 0.5rem 0 0;
+    height: 7.94rem;
+    width: 7.94rem;
+    margin-right: 3.1745rem;
+  }
+
+  .error {
+    visibility: hidden;
+    color: red;
+    font-size: 4.7619rem;
+  }
+
+  .modal-button {
+    border: 0.1rem solid rgba(0, 0, 0, 1);
+    border-radius: 10rem;
+    line-height: 15.455rem;
+    padding: 1.8rem 6rem 1.8rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 5.56rem;
   }
 }
