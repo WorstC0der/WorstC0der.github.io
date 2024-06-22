@@ -557,18 +557,18 @@ p {
     border: 0.1rem solid rgba(0, 0, 0, 0.3);
     border-radius: 10rem;
     line-height: 15.455rem;
-    padding: 1.8rem 6rem 1.8rem;
+    padding: 1.8rem 10rem 1.8rem;
     width: 100%;
     box-sizing: border-box;
     font-size: 5.56rem;
   }
 
   .input-icon::before {
-    top: 6.9rem;
-    left: 4.35rem;
+    top: 12rem;
+    left: 7.8rem;
     width: 0.75rem;
-    font-size: 3.35rem;
-    margin-top: -3.9rem;
+    font-size: 4.25rem;
+    margin-top: -5.2rem;
   }
 
   .consent-container {
