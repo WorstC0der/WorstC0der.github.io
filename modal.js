@@ -45,13 +45,15 @@ productButtons.forEach(function (button) {
   };
 });
 
-// Обработчик события нажатия на кнопку "Сохранить"
+// Обработчик события нажатия на кнопку "Купить"
 var saveButton = document.getElementById("buy-button");
 saveButton.onclick = function () {
   var nameInput = document.getElementById("name-input");
   var phoneInput = document.getElementById("phone-input");
   var productName = document.getElementById("modal-product-name").textContent;
+  var consentInput = document.getElementById("consent");
   let err = false;
+
   // Проверяем поля ввода на ошибки
   if (!validateName(nameInput.value)) {
     showError(nameInput);
@@ -67,15 +69,41 @@ saveButton.onclick = function () {
     hideError(phoneInput);
   }
 
+  if (!consentInput.checked) {
+    showErrorConsent(consentInput);
+    err = true;
+  } else {
+    hideErrorConsent(consentInput);
+  }
+
   if (err) return; // Если были ошибки, прерываем выполнение функции
 
   // Поля заполнены корректно, выполняем запись в localStorage и закрываем окно
   var data = {
     name: nameInput.value,
     phone: phoneInput.value,
+    productName: productName,
   };
-  localStorage.setItem(productName, JSON.stringify(data));
+
+  // Получаем существующие заказы из localStorage
+  var orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  // Добавляем новый заказ в массив
+  orders.push(data);
+
+  // Сохраняем обновленный массив заказов обратно в localStorage
+  localStorage.setItem("orders", JSON.stringify(orders));
+
   closeModal();
+
+  // Отображаем уведомление
+  var notification = document.getElementById("success-notification");
+  notification.style.display = "block";
+
+  // Скрываем уведомление через 3 секунды
+  setTimeout(function () {
+    notification.style.display = "none";
+  }, 3000);
 };
 
 // Функция для проверки имени
@@ -98,5 +126,17 @@ function showError(inputElement) {
 // Функция для скрытия сообщения об ошибке
 function hideError(inputElement) {
   var errorMessage = inputElement.nextElementSibling;
+  errorMessage.style.visibility = "hidden";
+}
+
+// Функция для отображения сообщения об ошибке для согласия на обработку
+function showErrorConsent(inputElement) {
+  var errorMessage = inputElement.parentElement.nextElementSibling;
+  errorMessage.style.visibility = "visible";
+}
+
+// Функция для скрытия сообщения об ошибке для согласия на обработку
+function hideErrorConsent(inputElement) {
+  var errorMessage = inputElement.parentElement.nextElementSibling;
   errorMessage.style.visibility = "hidden";
 }

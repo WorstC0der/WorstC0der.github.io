@@ -118,15 +118,17 @@
                 >SPC ЛАМИНАТ MODULED LAYRED CANTERA 46930</a
               >
             </h4>
-            <p class="description">33 класс 6 мм</p>
-            <p class="price">
-              <span>1 790 ₽</span>
-              <span class="price-old">2 170 ₽</span>
-              <span> / м&sup2;</span>
-            </p>
+            <div>
+              <p class="description">33 класс 6 мм</p>
+              <p class="price">
+                <span>1 790 ₽</span>
+                <span class="price-old">2 170 ₽</span>
+                <span> / м&sup2;</span>
+              </p>
 
-            <div class="button-group">
-              <button type="button" onclick="">Купить в 1 клик</button>
+              <div class="button-group">
+                <button type="button" onclick="">Купить в 1 клик</button>
+              </div>
             </div>
           </div>
         </div>
@@ -161,7 +163,7 @@
     <!-- Модальное окно -->
     <div id="modal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <img src="./img/CloseIcon.svg" class="close"></img>
         <h4 class="modal-head">КУПИТЬ В 1 КЛИК</h4>
         <div class="modal-details">
           <img
@@ -212,9 +214,14 @@
               >Даю согласие на обработку персональных данных</label
             >
           </div>
+          <p class="error consent-error">Необходимо дать согласие</p>
           <button id="buy-button" class="modal-button">Купить</button>
         </div>
       </div>
+    </div>
+
+    <div id="success-notification" class="success-notification">
+      Ваша заявка успешно отправлена!
     </div>
 
     <script src="modal.js"></script>
