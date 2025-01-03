@@ -30,9 +30,13 @@ var productButtons = document.querySelectorAll(".button-group button");
 productButtons.forEach(function (button) {
   button.onclick = function () {
     var productName =
-      this.parentNode.parentNode.querySelector(".product-name").textContent;
+      this.parentNode.parentNode.parentNode.querySelector(
+        ".product-name"
+      ).textContent;
     var imageUrl =
-      this.parentNode.parentNode.parentNode.querySelector(".image img").src;
+      this.parentNode.parentNode.parentNode.parentNode.querySelector(
+        ".image img"
+      ).src;
     var description =
       this.parentNode.parentNode.querySelector(".description").textContent;
     var currentPrice = this.parentNode.parentNode.querySelector(
